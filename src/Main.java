@@ -3,13 +3,16 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args)
     {
-        String[][] words2 = {{"hi", "bye", "stuff", "goo"}, {"time", "up", "you", "good"}, {"map", "low", "bow", "mom"}};
-        ArrayList<String> returnedList = Algorithm2DArrays.findStringsOfLength(words2, 3);
-        System.out.println(returnedList);
-        ArrayList<String> returnedList2 = Algorithm2DArrays.findStringsOfLength(words2, 4);
-        System.out.println(returnedList2);
-        ArrayList<String> returnedList3 = Algorithm2DArrays.findStringsOfLength(words2, 6);
-        System.out.println(returnedList3);
+        int[][] arr1 = {
+                {-9,-9,-9,1,1,1},
+                {0,-9,0,4,3,2},
+                {-9,-9,-9,1,2,3},
+                {0,0,8,6,6,0},
+                {0,0,0,-2,5,0},
+                {0,0,1,2,4,0},
+        };//makes sure the method actually works\
+        System.out.println(Algorithm2DArrays.hourGlassSum(arr1));
+
 
     }
 

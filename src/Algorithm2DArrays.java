@@ -167,4 +167,33 @@ public class Algorithm2DArrays {
                 if(str.length()==len) l.add(str);
         return l;
     }
+
+
+
+
+    public static int hourGlassSum(int[][] arr)
+    {
+        int max  = sumOfAroundMinusAdjacent(arr,1,1);
+        for (int r = 1; r < arr.length-1; r++) {
+            for (int c = 1; c < arr[0].length-1; c++) {
+                int sum = sumOfAroundMinusAdjacent(arr,r,c);
+                if(sum > max) max = sum;
+            }
+
+        }
+        return max;
+    }
+    private static int sumOfAroundMinusAdjacent(int[][] arr, int r, int c)
+    {
+        int sum = 0;
+        sum+= arr[r][c];
+        sum+= arr[r+1][c+1];
+        sum+= arr[r+1][c-1];
+        sum+= arr[r+1][c];
+        sum+= arr[r-1][c+1];
+        sum+= arr[r-1][c-1];
+        sum+= arr[r-1][c];
+        return sum;
+
+    }
 }
